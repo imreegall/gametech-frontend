@@ -9,17 +9,27 @@ export default defineComponent({
 <template>
   <header class="gametech-header">
     <nav class="left">
-      <h3>КАТАЛОГ</h3>
+      <router-link to="/catalog">
+        <h3>КАТАЛОГ</h3>
+      </router-link>
 
-      <h3>КОНТАКТЫ</h3>
+      <router-link to="/contacts">
+        <h3>КОНТАКТЫ</h3>
+      </router-link>
     </nav>
 
-    <h1 class="title">GAME<span class="red-text">TECH</span></h1>
+    <router-link to="/">
+      <h1 class="title">GAME<span class="red-text">TECH</span></h1>
+    </router-link>
 
     <nav class="right">
-      <div class="favorites"></div>
+      <router-link to="/favorites">
+        <div class="favorites"></div>
+      </router-link>
 
-      <div class="cart"></div>
+      <router-link to="/cart">
+        <div class="cart"></div>
+      </router-link>
     </nav>
   </header>
 </template>
@@ -69,7 +79,7 @@ export default defineComponent({
       &:hover
         background-image: url("/assets/images/svg-icons/cart-hover.svg")
     
-  > .title
+  .title
     font-size: 50px
 
     .red-text

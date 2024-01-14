@@ -15,6 +15,8 @@ export default defineComponent({
 <template>
   <div class="app">
     <gametech-header />
+
+    <router-view />
   </div>
 </template>
 

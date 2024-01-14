@@ -2,21 +2,21 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: "gametech-main",
+  name: "gametech-catalog",
 })
 </script>
 
 <template>
-  <main class="gametech-main">
+  <div class="gametech-catalog">
 
-  </main>
+  </div>
 </template>
 
 <style scoped lang="sass">
-.gametech-main
+.gametech-catalog
   width: 100%
   display: flex
   flex-direction: column
-  height: 200px
-  background-color: #8d8d8d
+  height: 100px
+  background-color: #7c7c7c
 </style>
