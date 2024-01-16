@@ -1,0 +1,57 @@
+{
+  "videoCard": {
+    "id": "videoCard",
+    "title": "Видеокарты",
+    "img": "/assets/images/png/videoCard.png",
+    "route": "videocards"
+  },
+
+  "processor": {
+    "id": "processor",
+    "title": "Процессоры",
+    "img": "/assets/images/png/processor.png",
+    "route": "processors"
+  },
+
+  "case": {
+    "id": "case",
+    "title": "Корпусы",
+    "img": "/assets/images/png/case.png",
+    "route": "cases"
+  },
+
+  "cooling": {
+    "id": "cooling",
+    "title": "Охлаждение",
+    "img": "/assets/images/png/cooling.png",
+    "route": "cooling"
+  },
+
+  "motherBoard": {
+    "id": "motherBoard",
+    "title": "Материнские платы",
+    "img": "/assets/images/png/motherBoard.png",
+    "route": "motherboards"
+  },
+
+  "storage": {
+    "id": "storage",
+    "title": "Информационные носители",
+    "img": "/assets/images/png/storage.png",
+    "route": "storage"
+  },
+
+  "ram": {
+    "id": "ram",
+    "title": "Оперативная память",
+    "img": "/assets/images/png/ram.png",
+    "route": "ram"
+  },
+
+  "accessories": {
+    "id": "accessories",
+    "title": "Аксессуары",
+    "img": "/assets/images/png/accessories.png",
+    "route": "accessories"
+  }
+}

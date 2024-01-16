@@ -1,0 +1,289 @@
+[
+  {
+    "id": "000e928d-592a-4a3c-99dc-43aa06d0da36",
+    "title": "Видеокарта MSI GeForce RTX 4090 SUPRIM",
+    "price": 297999,
+    "description": "PCI-E 4.0 24 ГБ GDDR6X, 384 бит, DisplayPort x3, HDMI, GPU 2230 МГц",
+    "category": "videoCard",
+    "views": 350
+  },
+
+  {
+    "id": "fa8785dd-104b-4aad-8e9c-f2d65a68067f",
+    "title": "Видеокарта Palit GeForce RTX 3090 GamingPro",
+    "price": 159999,
+    "description": "PCI-E 4.0 24 ГБ GDDR6X, 384 бит, DisplayPort x3, HDMI, GPU 1395 МГц",
+    "category": "videoCard",
+    "views": 800
+  },
+
+  {
+    "id": "7e718778-b8fe-4458-8546-c4a8ad47f509",
+    "title": "Видеокарта Palit GeForce GTX 1660 SUPER GamingPro OC",
+    "price": 41499,
+    "description": "PCI-E 3.0 6 ГБ GDDR6, 192 бит, DisplayPort, DVI-D, HDMI, GPU 1530 МГц",
+    "category": "videoCard",
+    "views": 600
+  },
+
+  {
+    "id": "f9c0beea-02e1-428d-8787-89330d282480",
+    "title": "Видеокарта Sapphire AMD Radeon RX 7900 XTX PULSE OC",
+    "price": 121499,
+    "description": "PCI-E 4.0 24 ГБ GDDR6, 384 бит, DisplayPort x2, HDMI x2, GPU 1900 МГц",
+    "category": "videoCard",
+    "views": 200
+  },
+
+  {
+    "id": "6f397ef7-ab31-4cfd-99b9-990340ef5fc8",
+    "title": "Процессор Intel Core i5-12400F OEM",
+    "price": 14799,
+    "description": "LGA 1700, 6 x 2.5 ГГц, L2 - 7.5 МБ, L3 - 18 МБ, 2 х DDR4, DDR5-4800 МГц, TDP 117 Вт",
+    "category": "processor",
+    "views": 400
+  },
+
+  {
+    "id": "8a7d6e2f-44ed-45e7-98a8-7fce5b76f4df",
+    "title": "Процессор AMD Ryzen 5 5600 OEM",
+    "price": 11799,
+    "description": "AM4, 6 x 3.5 ГГц, L2 - 3 МБ, L3 - 32 МБ, 2 х DDR4-3200 МГц, TDP 65 Вт",
+    "category": "processor",
+    "views": 800
+  },
+
+  {
+    "id": "7908c246-d6fb-40a9-8ec5-cbe88f4ceae2",
+    "title": "Процессор Intel Core i5-13400F OEM",
+    "price": 21999,
+    "description": "LGA 1700, 6P x 2.5 ГГц, 4E x 1.8 ГГц, L2 - 9.5 МБ, L3 - 20 МБ, 2 х DDR4, DDR5-4800 МГц, TDP 148 Вт",
+    "category": "processor",
+    "views": 750
+  },
+
+  {
+    "id": "a4fb0ed6-2bc7-4cc6-9567-9fae28de30e9",
+    "title": "Процессор AMD Ryzen 5 5600X OEM",
+    "price": 14999,
+    "description": "AM4, 6 x 3.7 ГГц, L2 - 3 МБ, L3 - 32 МБ, 2 х DDR4-3200 МГц, TDP 65 Вт",
+    "category": "processor",
+    "views": 350
+  },
+
+  {
+    "id": "7eab5955-a0fd-4163-8a0f-e7cc6a97c4d0",
+    "title": "Корпус Cougar Duoface Pro RGB черный",
+    "price": 8199,
+    "description": "Mid-Tower, E-ATX, Micro-ATX, Mini-ITX, SSI-CEB, USB 2.0 Type-A, USB 3.2 Gen1 Type-A, USB 3.2 Gen2 Type-C, ARGB вентиляторы, 4 x 120 мм",
+    "category": "case",
+    "views": 550
+  },
+
+  {
+    "id": "89382ad0-34fc-4e3e-8d77-a19e467026a0",
+    "title": "Корпус Cougar Duoface Pro RGB White белый",
+    "price": 8599,
+    "description": "Mid-Tower, E-ATX, Micro-ATX, Mini-ITX, SSI-CEB, USB 2.0 Type-A, USB 3.2 Gen1 Type-A, USB 3.2 Gen1 Type-C, ARGB вентиляторы, 4 x 120 мм",
+    "category": "case",
+    "views": 1000
+  },
+
+  {
+    "id": "13a5da82-e216-4ede-a629-571f6fc2f956",
+    "title": "Корпус ARDOR GAMING Rare Minicase MS2 BG черный",
+    "price": 3499,
+    "description": "Mini-Tower, Micro-ATX, Mini-ITX, USB 2.0 Type-A, USB 3.2 Gen1 Type-A",
+    "category": "case",
+    "views": 100
+  },
+
+  {
+    "id": "7c228f97-cc8a-4089-8d1d-0b9713ea5c3f",
+    "title": "Корпус ARDOR GAMING Rare Minicase MS2 WG белый",
+    "price": 3999,
+    "description": "Mini-Tower, Micro-ATX, Mini-ITX, USB 2.0 Type-A, USB 3.2 Gen1 Type-A",
+    "category": "case",
+    "views": 300
+  },
+
+  {
+    "id": "034e6877-50ba-4a67-8e2d-536d67b84a55",
+    "title": "Кулер для процессора DEEPCOOL Theta 15 PWM",
+    "price": 499,
+    "description": "основание - алюминий, 2800 об/мин, 36 дБ, 4 pin, 65 Вт",
+    "category": "cooling",
+    "views": 700
+  },
+
+  {
+    "id": "668f2227-18bf-47ac-afbe-f1fc304912fb",
+    "title": "Система охлаждения MSI MEG CORE LIQUID S360",
+    "price": 13999,
+    "description": "120 мм - три секции, 4 pin, радиатор - алюминий",
+    "category": "cooling",
+    "views": 900
+  },
+
+  {
+    "id": "448aa2c1-754e-45dd-9cde-e1ed9402a605",
+    "title": "Система охлаждения DEEPCOOL LS720",
+    "price": 13999,
+    "description": "120 мм - три секции, 3 pin, радиатор - алюминий",
+    "category": "cooling",
+    "views": 550
+  },
+
+  {
+    "id": "849f1616-d7bc-4a08-b69d-824da9abdd83",
+    "title": "Кулер для процессора ID-COOLING SE-224-XTS ARGB",
+    "price": 2899,
+    "description": "основание - алюминий\\медь, 1500 об/мин, 28.9 дБ, 4 pin, 220 Вт",
+    "category": "cooling",
+    "views": 200
+  },
+
+  {
+    "id": "1d3b8bda-63ce-4552-833a-bb2716597eee",
+    "title": "Материнская плата MSI MAG Z690 TOMAHAWK WIFI",
+    "price": 21999,
+    "description": "LGA 1700, Intel Z690, 4xDDR5-5600 МГц, 3xPCI-Ex16, 4xM.2, Standard-ATX",
+    "category": "motherBoard",
+    "views": 600
+  },
+
+  {
+    "id": "2f87ecfa-0f57-4ad9-9f2f-a32f4154133b",
+    "title": "Материнская плата MSI PRO H610M-E DDR4",
+    "price": 7499,
+    "description": "LGA 1700, Intel H610, 2xDDR4-3200 МГц, 1xPCI-Ex16, 1xM.2, Micro-ATX",
+    "category": "motherBoard",
+    "views": 450
+  },
+
+  {
+    "id": "f43becf6-5b48-4330-8dc6-a25bdac8d4af",
+    "title": "Материнская плата GIGABYTE B550 AORUS ELITE V2",
+    "price": 14999,
+    "description": "AM4, AMD B550, 4xDDR4-3200 МГц, 3xPCI-Ex16, 2xM.2, Standard-ATX",
+    "category": "motherBoard",
+    "views": 250
+  },
+
+  {
+    "id": "b42d41fe-ed88-4b4a-bea4-0ed836a80a77",
+    "title": "Материнская плата MSI MPG B550 GAMING PLUS",
+    "price": 13999,
+    "description": "AM4, AMD B550, 4xDDR4-3200 МГц, 2xPCI-Ex16, 2xM.2, Standard-ATX",
+    "category": "motherBoard",
+    "views": 900
+  },
+
+  {
+    "id": "44590e4e-6d08-4404-a772-13da2dbe3950",
+    "title": "1 ТБ Жесткий диск WD Blue",
+    "price": 5699,
+    "description": "SATA III, 6 Гбит/с, 7200 об/мин, кэш память - 64 МБ",
+    "category": "storage",
+    "views": 800
+  },
+
+  {
+    "id": "05e6b41f-cfb3-4e1d-8a50-e1954e5c10d8",
+    "title": "2 ТБ Жесткий диск WD Blue",
+    "price": 6999,
+    "description": "SATA III, 5400 rpm, 149 Мбайт/сек, кэш-память - 128 МБ",
+    "category": "storage",
+    "views": 300
+  },
+
+  {
+    "id": "a8497b99-a6a4-4995-9f98-9403d44e3787",
+    "title": "LFF (3.5\") Серверный HDD Toshiba Enterprise Capacity",
+    "price": 29999,
+    "description": "SAS, 16 ТБ, 7200 об/мин, 512 МБ",
+    "category": "storage",
+    "views": 100
+  },
+
+  {
+    "id": "072f5276-c825-4f0c-98f0-ab0b2ff65667",
+    "title": "1000 ГБ 2.5\" SATA накопитель Samsung 870 EVO [MZ-77E1T0BW/EU]",
+    "price": 8999,
+    "description": "SATA, чтение - 560 Мбайт/сек, запись - 530 Мбайт/сек, 3D NAND 3 бит MLC (TLC)",
+    "category": "storage",
+    "views": 1000
+  },
+
+  {
+    "id": "e2f73ca8-593d-45a5-9d81-08e2c240257f",
+    "title": "Оперативная память Kingston FURY Beast Black [KF432C16BBK2/16] 16 ГБ",
+    "price": 4599,
+    "description": "DDR4, 8 ГБx2 шт, 3200 МГц, 16-18-18-36",
+    "category": "ram",
+    "views": 400
+  },
+
+  {
+    "id": "8e6b6b50-22e0-4a6f-8384-a547a19802da",
+    "title": "Оперативная память ADATA XPG GAMMIX D20 [AX4U32008G16A-DCBK20] 16 ГБ",
+    "price": 4199,
+    "description": "DDR4, 8 ГБx2 шт, 3200 МГц, 16-20-20",
+    "category": "ram",
+    "views": 700
+  },
+
+  {
+    "id": "cc0e3821-9f06-451c-8640-207221747158",
+    "title": "Оперативная память G.Skill AEGIS [F4-3200C16D-16GIS] 16 ГБ",
+    "price": 3799,
+    "description": "DDR4, 8 ГБx2 шт, 3200 МГц, 16-18-18-38",
+    "category": "ram",
+    "views": 500
+  },
+
+  {
+    "id": "e4e77dc4-e6d3-45be-993a-5bab68ecaefa",
+    "title": "Оперативная память AMD Radeon R9 Gamer Series [R9S416G3206U2K] 16 ГБ",
+    "price": 3699,
+    "description": "DDR4, 8 ГБx2 шт, 3200 МГц, 16-18-18",
+    "category": "ram",
+    "views": 200
+  },
+
+  {
+    "id": "1e059f7a-a679-407b-9712-84943f19a68e",
+    "title": "Привод DVD-RW ASUS DRW-24D5MT",
+    "price": 2299,
+    "description": "5.25\", SATA, CD-R 48x, CD-RW 24x, DVD-R 24x, DVD+R 24x, DVD-RAM 5x, DVD-R DL 8x",
+    "category": "accessories",
+    "views": 50
+  },
+
+  {
+    "id": "5b2783e9-854d-48d2-a452-e00575637491",
+    "title": "Внутренняя звуковая карта ASUS Xonar SE",
+    "price": 4499,
+    "description": "формат звуковой карты 5.1, PCI-E, 24 бит/192 кГц",
+    "category": "accessories",
+    "views": 150
+  },
+
+  {
+    "id": "0fab1c9a-0194-4c0c-95f8-d113d45633a4",
+    "title": "Термопаста Arctic Cooling MX-4 (2019)",
+    "price": 1150,
+    "description": "шприц, 4 г, 8.5 Вт/мК",
+    "category": "accessories",
+    "views": 100
+  },
+
+  {
+    "id": "b0a3d762-29b9-4996-9ba9-28575fc17f50",
+    "title": "Комплект крепления кулера DEEPCOOL EM072-MKNNIN-G-1",
+    "price": 199,
+    "description": "для процессора, LGA 1700",
+    "category": "accessories",
+    "views": 0
+  }
+]
