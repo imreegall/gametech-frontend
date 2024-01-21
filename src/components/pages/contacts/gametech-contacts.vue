@@ -8,7 +8,7 @@ export default defineComponent({
 
 <template>
   <div class="gametech-contacts">
-    <h2 class="title">Контакты</h2>
+    <h2>Контакты</h2>
 
     <div class="contacts-wrapper">
       <div class="image"></div>
@@ -23,13 +23,13 @@ export default defineComponent({
         <div class="contact">
           <h4 class="title">Телефон:</h4>
 
-          <h4 class="value"><a href="tel:79377708601">+7 (937) 770-86-01</a></h4>
+          <h4 class="value link-underline"><a href="tel:79377708601">+7 (937) 770-86-01</a></h4>
         </div>
 
         <div class="contact">
           <h4 class="title">Электронная почта:</h4>
 
-          <h4 class="value"><a href="mailto:imreegall@gmail.com">imreegall@gmail.com</a></h4>
+          <h4 class="value link-underline"><a href="mailto:imreegall@gmail.com">imreegall@gmail.com</a></h4>
         </div>
 
         <div class="contact">
@@ -53,12 +53,15 @@ export default defineComponent({
   width: 100%
   display: flex
   flex-direction: column
-  padding: 100px
-  gap: 50px
   align-items: center
 
-  > .title
-    font-size: 30px
+  @media (min-width: $bigScreenStart)
+    padding: 100px
+    gap: 50px
+
+  @media (max-width: $smallScreenEnd)
+    padding: 20px
+    gap: 20px
 
   .contacts-wrapper
     display: flex
@@ -78,18 +81,31 @@ export default defineComponent({
       display: flex
       flex-direction: column
       gap: 10px
-      align-items: flex-start
       width: 100%
+
+      @media (min-width: $bigScreenStart)
+        align-items: flex-start
+
+      @media (max-width: $smallScreenEnd)
+        align-items: center
 
       .contact
         display: flex
         gap: 30px
         align-items: baseline
 
+        @media (min-width: $bigScreenStart)
+
+        @media (max-width: $smallScreenEnd)
+          width: 100%
+          justify-content: space-between
+
         > .title
-          font-size: 20px
           color: $red
 
         .value
-          font-size: 20px
+          @media (min-width: $bigScreenStart)
+
+          @media (max-width: $smallScreenEnd)
+            text-align: right
 </style>

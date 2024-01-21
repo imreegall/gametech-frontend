@@ -23,7 +23,7 @@ export default defineComponent({
 
 <template>
   <div class="gametech-catalog">
-    <h2 class="title">Выберите категорию</h2>
+    <h2>Выберите категорию</h2>
 
     <div class="categories-wrapper">
       <div
@@ -49,12 +49,15 @@ export default defineComponent({
   width: 100%
   display: flex
   flex-direction: column
-  padding: 100px calc((1280px - 400px * 2 - 10px - 20px * 2) / 2)
-  gap: 50px
   align-items: center
 
-  > .title
-    font-size: 30px
+  @media (min-width: $bigScreenStart)
+    padding: 100px calc((1280px - 400px * 2 - 10px - 20px * 2) / 2)
+    gap: 50px
+
+  @media (max-width: $smallScreenEnd)
+    padding: 20px
+    gap: 20px
 
   .categories-wrapper
     display: flex
@@ -96,7 +99,7 @@ export default defineComponent({
         //border: 1px solid #727272
 
         > .title
-          font-size: 40px
+          //font-size: 40px
           text-align: center
           +user-select(none)
           z-index: 15

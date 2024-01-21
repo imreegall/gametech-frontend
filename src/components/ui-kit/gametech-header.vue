@@ -72,7 +72,7 @@ export default defineComponent({
           <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9966 9.06799C10.9969 7.89928 9.32987 7.58491 8.07735 8.65509C6.82482 9.72528 6.64848 11.5146 7.6321 12.7803C8.26211 13.591 9.87558 15.0943 10.9542 16.0704C11.3127 16.3948 11.4919 16.557 11.7066 16.6221C11.8911 16.678 12.102 16.678 12.2866 16.6221C12.5012 16.557 12.6805 16.3948 13.0389 16.0704C14.1176 15.0943 15.731 13.591 16.3611 12.7803C17.3447 11.5146 17.1899 9.71402 15.9158 8.65509C14.6417 7.59616 12.9963 7.89928 11.9966 9.06799Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
 
-        <h2 class="counter" v-if="favoritesLength">{{ favoritesLength }}</h2>
+        <h6 class="counter" v-if="favoritesLength">{{ favoritesLength }}</h6>
       </router-link>
 
       <router-link to="/cart" class="cart-wrapper">
@@ -80,7 +80,7 @@ export default defineComponent({
           <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
 
-        <h2 class="counter" v-if="cartLength">{{ cartLength }}</h2>
+        <h6 class="counter" v-if="cartLength">{{ cartLength }}</h6>
       </router-link>
     </nav>
   </header>
@@ -94,21 +94,26 @@ export default defineComponent({
   align-items: center
   padding: 10px 30px
   background-color: #ffffff
-  position: sticky
-  top: 0
   z-index: 100
-  border: 1px solid transparent
-  border-top: none !important
 
-  &.active
-    border: 1px solid gray
-    +border-radius(0 0 10px 10px)
+  @media (min-width: $bigScreenStart)
+    position: sticky
+    top: 0
+    border: 1px solid transparent
+    border-top: none !important
+
+    &.active
+      border: 1px solid gray
+      +border-radius(0 0 10px 10px)
+
+  @media (max-width: $smallScreenEnd)
+    flex-direction: column
+    gap: 10px
 
   nav
     width: 100%
     display: flex
     gap: 20px
-    font-size: 30px
     
     > *
       cursor: pointer
@@ -117,16 +122,23 @@ export default defineComponent({
         color: $red
 
     &.left
-      justify-content: flex-start
+      @media (min-width: $bigScreenStart)
+        justify-content: flex-start
+
+      @media (max-width: $smallScreenEnd)
+        justify-content: center
 
     &.right
-      justify-content: flex-end
+      @media (min-width: $bigScreenStart)
+        justify-content: flex-end
+
+      @media (max-width: $smallScreenEnd)
+        justify-content: center
 
     .counter
       position: absolute
       top: -5px
       right: -5px
-      font-size: 10px
       background-color: $red
       color: white
       width: 20px
@@ -162,8 +174,6 @@ export default defineComponent({
             stroke: $red
     
   .title
-    font-size: 50px
-
     .red-text
       color: $red
 </style>

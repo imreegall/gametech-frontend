@@ -14,19 +14,19 @@ export default defineComponent({
 
     <nav>
       <router-link to="/catalog">
-        <h4 class="link-underline">КАТАЛОГ</h4>
+        <h3 class="link-underline">КАТАЛОГ</h3>
       </router-link>
 
       <router-link to="/contacts">
-        <h4 class="link-underline">КОНТАКТЫ</h4>
+        <h3 class="link-underline">КОНТАКТЫ</h3>
       </router-link>
 
       <router-link to="/favorites">
-        <h4 class="link-underline">ИЗБРАННОЕ</h4>
+        <h3 class="link-underline">ИЗБРАННОЕ</h3>
       </router-link>
 
       <router-link to="/cart">
-        <h4 class="link-underline">КОРЗИНА</h4>
+        <h3 class="link-underline">КОРЗИНА</h3>
       </router-link>
     </nav>
   </footer>
@@ -39,13 +39,18 @@ export default defineComponent({
   margin-top: auto
   +border-radius(20px 20px 0 0)
   display: flex
-  justify-content: space-between
   align-items: center
-  padding: 50px 100px
+
+  @media (min-width: $bigScreenStart)
+    padding: 50px 100px
+    justify-content: space-between
+
+  @media (max-width: $smallScreenEnd)
+    padding: 30px 60px
+    flex-direction: column
+    gap: 50px
 
   .title
-    font-size: 50px
-
     .red-text
       color: $red
 
@@ -53,5 +58,11 @@ export default defineComponent({
     display: flex
     gap: 30px
     height: 100%
-    align-items: flex-end
+
+    @media (min-width: $bigScreenStart)
+      align-items: flex-end
+
+    @media (max-width: $smallScreenEnd)
+      flex-direction: column
+      align-items: center
 </style>

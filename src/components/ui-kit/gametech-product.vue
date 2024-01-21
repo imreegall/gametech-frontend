@@ -63,7 +63,7 @@ export default defineComponent({
     </div>
 
     <aside>
-      <h4 class="title">{{ product.title }}</h4>
+      <h4>{{ product.title }}</h4>
 
       <h5 class="description">{{ product.description }}</h5>
 
@@ -87,7 +87,7 @@ export default defineComponent({
             @click="editCartPosition(false)"
         >-</button>
 
-        <h2 class="count">{{ inCartSum }}</h2>
+        <h5 class="count">{{ inCartSum }}</h5>
 
         <button
             @click="editCartPosition(true)"
@@ -106,23 +106,39 @@ export default defineComponent({
 .gametech-catalog-product
   width: 100%
   display: flex
-  gap: 50px
   background-color: $gray
   padding: 10px
   +border-radius(10px)
-  justify-content: flex-start
+
+  @media (min-width: $bigScreenStart)
+    gap: 50px
+    justify-content: flex-start
+
+  @media (max-width: $smallScreenEnd)
+    gap: 30px
+    flex-direction: column
 
   .image-wrapper
-    padding: 20px
     background-color: white
     +border-radius(10px)
 
+    @media (min-width: $bigScreenStart)
+      padding: 20px
+
+    @media (max-width: $smallScreenEnd)
+      padding: 10px
+
     .image
-      width: 100px
       aspect-ratio: 1
       +background-image-settings()
       +border-radius(10px)
       position: relative
+
+      @media (min-width: $bigScreenStart)
+        width: 100px
+
+      @media (max-width: $smallScreenEnd)
+        width: 100%
 
       &::before
         content: ""
@@ -139,31 +155,35 @@ export default defineComponent({
     display: flex
     flex-direction: column
     align-items: flex-start
-    justify-content: space-between
     flex: 1
 
-    > .title
-      font-size: 20px
+    @media (min-width: $bigScreenStart)
+      justify-content: space-between
+
+    @media (max-width: $smallScreenEnd)
+      gap: 15px
 
     .description
-      font-size: 12px
       display: -webkit-box
       -webkit-box-orient: vertical
       overflow: hidden
       -webkit-line-clamp: 3
 
     .price
-      font-size: 20px
-
       .number
         color: $red
 
   .buttons-group
     display: flex
-    flex-direction: column
     justify-content: space-between
-    align-items: flex-end
-    margin-left: auto
+
+    @media (min-width: $bigScreenStart)
+      flex-direction: column
+      align-items: flex-end
+      margin-left: auto
+
+    @media (max-width: $smallScreenEnd)
+      align-items: center
 
     > button
       padding: 10px 20px
@@ -173,6 +193,13 @@ export default defineComponent({
       font-family: 'Tektur', 'Calibri Light', sans-serif
       font-weight: 700
       +user-select(none)
+
+      &:active
+        padding-top: 12px
+        padding-bottom: 8px
+
+      &:hover
+        background-color: #d9d9d9
 
       &.wishlist
         &:active

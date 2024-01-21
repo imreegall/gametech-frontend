@@ -16,14 +16,14 @@ export default defineComponent({
 
 <template>
   <div class="gametech-main-news">
-    <h2 class="title">Новости</h2>
+    <h2>Новости</h2>
 
     <div class="news-wrapper">
       <div
           class="news-block"
           v-for="newsBlock in news"
       >
-        <h3 class="title">{{ newsBlock.title }}</h3>
+        <h3>{{ newsBlock.title }}</h3>
 
         <h6 class="date">{{ new Date(newsBlock.date) }}</h6>
 
@@ -50,19 +50,26 @@ export default defineComponent({
   width: 100%
   display: flex
   flex-direction: column
-  padding: 0 100px 100px
   gap: 50px
   align-items: center
 
-  > .title
-    font-size: 30px
+  @media (min-width: $bigScreenStart)
+    padding: 0 100px 100px
+
+  @media (max-width: $smallScreenEnd)
+    padding: 20px
 
   .news-wrapper
     display: flex
     flex-direction: column
-    gap: 50px
     width: 100%
     align-items: center
+
+    @media (min-width: $bigScreenStart)
+      gap: 50px
+
+    @media (max-width: $smallScreenEnd)
+      gap: 30px
 
     .news-block
       display: flex
@@ -71,14 +78,15 @@ export default defineComponent({
       align-items: flex-start
       width: 100%
       background-color: $gray
-      padding: 20px 40px
       +border-radius(20px)
 
-      > .title
-        font-size: 30px
+      @media (min-width: $bigScreenStart)
+        padding: 20px 40px
+
+      @media (max-width: $smallScreenEnd)
+        padding: 20px
 
       .date
-        font-size: 12px
         color: #9d9d9d
 
       .image
@@ -105,6 +113,6 @@ export default defineComponent({
           position: absolute
 
       .description
-        font-size: 14px
+        //font-size: 14px
         text-indent: 20px
 </style>

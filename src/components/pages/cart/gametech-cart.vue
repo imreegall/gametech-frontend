@@ -68,7 +68,7 @@ export default defineComponent({
 
 <template>
   <div class="gametech-cart">
-    <h2 class="title">Корзина</h2>
+    <h2>Корзина</h2>
 
     <h3
         v-if="isCartEmpty"
@@ -85,9 +85,9 @@ export default defineComponent({
       />
 
       <div class="itogo">
-        <h2 class="title">Итого:</h2>
+        <h3>Итого:</h3>
 
-        <h1 class="value">{{ cartSum.toLocaleString() }} ₽</h1>
+        <h2>{{ cartSum.toLocaleString() }} ₽</h2>
       </div>
     </template>
   </div>
@@ -98,24 +98,26 @@ export default defineComponent({
   width: 100%
   display: flex
   flex-direction: column
-  padding: 100px
-  gap: 50px
   align-items: center
 
-  > .title
-    font-size: 30px
+  @media (min-width: $bigScreenStart)
+    padding: 100px
+    gap: 50px
+
+  @media (max-width: $smallScreenEnd)
+    padding: 20px
+    gap: 20px
 
   .itogo
     display: flex
     flex-direction: column
     gap: 20px
     align-items: flex-start
-    align-self: flex-end
-    min-width: 200px
 
-    .title
-      font-size: 20px
+    @media (min-width: $bigScreenStart)
+      min-width: 200px
+      align-self: flex-end
 
-    .value
-      font-size: 24px
+    @media (max-width: $smallScreenEnd)
+      align-self: flex-start
 </style>

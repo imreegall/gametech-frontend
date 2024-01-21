@@ -1,3 +1,5 @@
+@import "variables"
+
 @font-face
   font-family: 'Tektur'
   src: local('Tektur Regular'), local('Tektur-Regular'), url('/src/assets/fonts/Tektur/Tektur-Regular.ttf') format('truetype')
@@ -44,22 +46,58 @@ h1
   font-family: 'Tektur', 'Calibri Light', sans-serif
   font-weight: 900
 
+  @media (min-width: $bigScreenStart)
+    font-size: 50px
+
+  @media (max-width: $smallScreenEnd)
+    font-size: 36px
+
 h2
   font-family: 'Tektur', 'Calibri Light', sans-serif
   font-weight: 800
+
+  @media (min-width: $bigScreenStart)
+    font-size: 32px
+
+  @media (max-width: $smallScreenEnd)
+    font-size: 24px
 
 h3
   font-family: 'Tektur', 'Calibri Light', sans-serif
   font-weight: 700
 
+  @media (min-width: $bigScreenStart)
+    font-size: 24px
+
+  @media (max-width: $smallScreenEnd)
+    font-size: 20px
+
 h4
   font-family: 'Tektur', 'Calibri Light', sans-serif
   font-weight: 600
+
+  @media (min-width: $bigScreenStart)
+    font-size: 20px
+
+  @media (max-width: $smallScreenEnd)
+    font-size: 18px
 
 h5
   font-family: 'Tektur', 'Calibri Light', sans-serif
   font-weight: 500
 
+  @media (min-width: $bigScreenStart)
+    font-size: 16px
+
+  @media (max-width: $smallScreenEnd)
+    font-size: 14px
+
 h6
   font-family: 'Tektur', 'Calibri Light', sans-serif
   font-weight: 400
+
+  @media (min-width: $bigScreenStart)
+    font-size: 12px
+
+  @media (max-width: $smallScreenEnd)
+    font-size: 12px

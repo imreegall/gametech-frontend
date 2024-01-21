@@ -21,6 +21,6 @@ export default defineComponent({
   align-items: center
   flex-direction: column
   gap: 10px
-  font-size: 50px
+  //font-size: 50px
   padding: 100px
 </style>

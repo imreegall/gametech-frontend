@@ -56,7 +56,7 @@ export default defineComponent({
 
 <template>
   <div class="gametech-favorites">
-    <h2 class="title">Избранное</h2>
+    <h2>Избранное</h2>
 
     <h3
         v-if="isWishlistEmpty"
@@ -79,10 +79,13 @@ export default defineComponent({
   width: 100%
   display: flex
   flex-direction: column
-  padding: 100px
-  gap: 50px
   align-items: center
 
-  > .title
-    font-size: 30px
+  @media (min-width: $bigScreenStart)
+    padding: 100px
+    gap: 50px
+
+  @media (max-width: $smallScreenEnd)
+    padding: 20px
+    gap: 20px
 </style>
