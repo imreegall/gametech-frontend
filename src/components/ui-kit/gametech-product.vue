@@ -63,11 +63,11 @@ export default defineComponent({
     </div>
 
     <aside>
-      <h4>{{ product.title }}</h4>
+      <h4>{{ product.name }}</h4>
 
       <h5 class="description">{{ product.description }}</h5>
 
-      <h3 class="price">Цена: <span class="number">{{ product.price.toLocaleString() }} ₽</span></h3>
+      <h3 class="price">Цена: <span class="number">{{ (product.price / 100).toLocaleString() }} ₽</span></h3>
     </aside>
 
     <div class="buttons-group">

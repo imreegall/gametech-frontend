@@ -3,55 +3,63 @@
     "id": "videoCard",
     "title": "Видеокарты",
     "img": "/assets/images/png/videoCard.png",
-    "route": "videocards"
+    "route": "videocards",
+    "category": "videocard"
   },
 
   "processor": {
     "id": "processor",
     "title": "Процессоры",
     "img": "/assets/images/png/processor.png",
-    "route": "processors"
+    "route": "processors",
+    "category": "processor"
   },
 
   "case": {
     "id": "case",
     "title": "Корпусы",
     "img": "/assets/images/png/case.png",
-    "route": "cases"
+    "route": "cases",
+    "category": "case"
   },
 
   "cooling": {
     "id": "cooling",
     "title": "Охлаждение",
     "img": "/assets/images/png/cooling.png",
-    "route": "cooling"
+    "route": "cooling",
+    "category": "cooling"
   },
 
   "motherBoard": {
     "id": "motherBoard",
     "title": "Материнские платы",
     "img": "/assets/images/png/motherBoard.png",
-    "route": "motherboards"
+    "route": "motherboards",
+    "category": "motherboard"
   },
 
   "storage": {
     "id": "storage",
     "title": "Информационные носители",
     "img": "/assets/images/png/storage.png",
-    "route": "storage"
+    "route": "storage",
+    "category": "storage"
   },
 
   "ram": {
     "id": "ram",
     "title": "Оперативная память",
     "img": "/assets/images/png/ram.png",
-    "route": "ram"
+    "route": "ram",
+    "category": "ram"
   },
 
   "accessories": {
     "id": "accessories",
     "title": "Аксессуары",
     "img": "/assets/images/png/accessories.png",
-    "route": "accessories"
+    "route": "accessories",
+    "category": "accessories"
   }
 }

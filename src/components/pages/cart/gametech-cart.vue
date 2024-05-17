@@ -3,13 +3,17 @@ import { defineComponent } from 'vue'
 
 import gametechProductsList from "../../ui-kit/gametech-products-list.vue";
 
-import products from "../../../storage/products/index.js";
-
 export default defineComponent({
   name: "gametech-cart",
 
   components: {
     gametechProductsList,
+  },
+
+  data() {
+    return {
+      products: []
+    }
   },
 
   props: {
@@ -28,6 +32,10 @@ export default defineComponent({
     },
   },
 
+  mounted() {
+    this.fetchProducts()
+  },
+
   computed: {
     isCartEmpty() {
       return Object.keys(this.cart).length === 0
@@ -37,20 +45,36 @@ export default defineComponent({
       let sum = 0
 
       Object.keys(this.cart).forEach(productId => {
-        const productObj = products.find(product => product.id === productId)
+        const productObj = this.products.find(product => product.id === productId)
 
-        sum += productObj.price * this.cart[productId]
+        if (!productObj) {
+          return 0
+        }
+
+        sum += productObj.price / 100 * this.cart[productId]
       })
 
       return sum
     },
 
     cartProductsList() {
-      return products.filter(product => Object.keys(this.cart).includes(product.id))
+      return this.products.filter(product => Object.keys(this.cart).includes(product.id))
     },
   },
 
   methods: {
+    async fetchProducts() {
+      await fetch(`http://localhost:8080/api/good`).then(async (res) => {
+        const result = await res.json()
+
+        console.log('Fetching Goods Result (success):', result)
+
+        this.products = result
+      }).catch(err => {
+        console.log('Fetching Goods Error:', err)
+      })
+    },
+
     like(id) {
       this.$emit('like', id)
     },

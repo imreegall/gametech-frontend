@@ -4,6 +4,8 @@ import { defineComponent } from 'vue'
 import gametechHeader from "./components/ui-kit/gametech-header.vue";
 import gametechFooter from "./components/ui-kit/gametech-footer.vue";
 
+import axios from "axios";
+
 export default defineComponent({
   name: "app",
 
@@ -46,12 +48,33 @@ export default defineComponent({
   },
 
   methods: {
-    like(id) {
+    async like(id) {
       if (this.wishlist.includes(id)) {
         const indexOfId = this.wishlist.indexOf(id)
         this.wishlist.splice(indexOfId, 1)
       } else {
         this.wishlist.push(id)
+
+        await fetch(`http://localhost:8080/api/good?id=${ id }`).then(async res => {
+          const result = await res.json()
+          console.log('Fetching Good Result (success)', result)
+
+          const { popular: goodPopular } = result
+
+          console.log('test', goodPopular)
+
+          await axios.put(`http://localhost:8080/api/good?id=${ id }`, {
+            popular: goodPopular + 1
+          }).then(res => {
+            console.log('Fetching Good Result (PUT success)', res)
+          }).catch(err => {
+            console.log('Fetching Good Error', err)
+          })
+
+          console.log('test end')
+        }).catch(err => {
+          console.log('Fetching Goods Error', err)
+        })
       }
     },
 

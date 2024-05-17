@@ -3,13 +3,17 @@ import { defineComponent } from 'vue'
 
 import gametechProductsList from "../../ui-kit/gametech-products-list.vue";
 
-import products from "../../../storage/products/index.js";
-
 export default defineComponent({
   name: "gametech-favorites",
 
   components: {
     gametechProductsList,
+  },
+
+  data() {
+    return {
+      products: []
+    }
   },
 
   props: {
@@ -28,17 +32,33 @@ export default defineComponent({
     },
   },
 
+  mounted() {
+    this.fetchProducts()
+  },
+
   computed: {
     isWishlistEmpty() {
       return this.wishlist.length === 0
     },
 
     likedProductsList() {
-      return products.filter(product => this.wishlist.includes(product.id))
+      return this.products.filter(product => this.wishlist.includes(product.id))
     },
   },
 
   methods: {
+    async fetchProducts() {
+      await fetch(`http://localhost:8080/api/good`).then(async (res) => {
+        const result = await res.json()
+
+        console.log('Fetching Goods Result (success):', result)
+
+        this.products = result
+      }).catch(err => {
+        console.log('Fetching Goods Error:', err)
+      })
+    },
+
     like(id) {
       this.$emit('like', id)
     },

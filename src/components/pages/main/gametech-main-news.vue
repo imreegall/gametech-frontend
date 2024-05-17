@@ -1,16 +1,34 @@
 <script>
 import { defineComponent } from 'vue'
 
-import news from "../../../storage/news/index.js";
-
 export default defineComponent({
   name: "gametech-main-news",
 
   data() {
     return {
-      news,
+      news: []
     }
   },
+
+  mounted() {
+    this.getAllPosts()
+  },
+
+  methods: {
+    async getAllPosts() {
+      await fetch('http://localhost:8080/api/post').then(async res => {
+        const result = await res.json()
+
+        this.news = result
+
+        console.log('Fetching Posts Result (success):')
+
+        console.table(result)
+      }).catch(err => {
+        console.error('Fetching Posts Error:', err)
+      })
+    }
+  }
 })
 </script>
 
@@ -25,13 +43,12 @@ export default defineComponent({
       >
         <h3>{{ newsBlock.title }}</h3>
 
-        <h6 class="date">{{ new Date(newsBlock.date) }}</h6>
+        <h6 class="date">{{ (new Date(newsBlock.created)).toLocaleString() }}</h6>
 
         <div
             class="image"
-            v-if="newsBlock.image"
             :style="{
-              backgroundImage: `url(/assets/images/news/${ newsBlock.id }.webp)`,
+              backgroundImage: `url(/assets/images/news/${ newsBlock.id }.webp)`
             }"
         ></div>
 

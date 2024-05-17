@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import GameTechMain from "./components/pages/main/GameTech-main.vue";
-import GameTechCatalog from "./components/pages/catalog/GameTech-catalog.vue";
+import gametechMain from "./components/pages/main/gametech-main.vue";
+import gametechCatalog from "./components/pages/catalog/gametech-catalog.vue";
 import gametechCatalogProductsList from "./components/pages/catalog/gametech-catalog-products-list.vue";
 import gametechFavorites from "./components/pages/favorites/gametech-favorites.vue";
 import gametechCart from "./components/pages/cart/gametech-cart.vue";
 import gametechContacts from "./components/pages/contacts/gametech-contacts.vue";
 
-import GameTech404 from "./components/pages/404/GameTech-404.vue";
+import gametech404 from "./components/pages/404/gametech-404.vue";
 
 export default createRouter({
     history: createWebHistory(),
@@ -15,7 +15,7 @@ export default createRouter({
         {
             path: "/",
             name: "main",
-            component: GameTechMain,
+            component: gametechMain,
             meta: {
                 title: "GameTech - Главная страница"
             },
@@ -24,7 +24,7 @@ export default createRouter({
         {
             path: "/catalog",
             name: "catalog",
-            component: GameTechCatalog,
+            component: gametechCatalog,
             meta: {
                 title: "GameTech - Каталог товаров"
             },
@@ -69,7 +69,7 @@ export default createRouter({
         {
             path: "/:pathMatch(.*)*",
             name: "404",
-            component: GameTech404,
+            component: gametech404,
             meta: {
                 title: "GameTech - Страница не найдена"
             },

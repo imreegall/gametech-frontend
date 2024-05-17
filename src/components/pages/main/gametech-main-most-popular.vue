@@ -3,13 +3,17 @@ import { defineComponent } from 'vue'
 
 import gametechProductsList from "../../ui-kit/gametech-products-list.vue";
 
-import products from "../../../storage/products/index.js";
-
 export default defineComponent({
   name: "gametech-main-most-popular",
 
   components: {
     gametechProductsList,
+  },
+
+  data() {
+    return {
+      products: []
+    }
   },
 
   props: {
@@ -28,13 +32,31 @@ export default defineComponent({
     },
   },
 
+  mounted() {
+    this.fetchProducts()
+  },
+
   computed: {
     mostPopularProductsList() {
-      return products.sort((a, b) => b.views - a.views).slice(0, 3)
+      return this.products.sort((a, b) => b.popular - a.popular).slice(0, 3)
     },
   },
 
   methods: {
+    async fetchProducts() {
+      await fetch(`http://localhost:8080/api/good`).then(async (res) => {
+        const result = await res.json()
+
+        this.products = result
+
+        console.log('Fetching Goods Result (success):')
+
+        console.table(result)
+      }).catch(err => {
+        console.log('Fetching Goods Error:', err)
+      })
+    },
+
     like(id) {
       this.$emit('like', id)
     },
@@ -52,7 +74,7 @@ export default defineComponent({
 
 <template>
   <div class="gametech-main-most-popular">
-    <h2>Самые популярные товары</h2>
+    <h2 class="title">Самые популярные товары</h2>
 
     <div class="products-wrapper">
       <gametech-products-list
@@ -81,4 +103,10 @@ export default defineComponent({
   @media (max-width: $smallScreenEnd)
     padding: 20px
     gap: 20px
+
+  > .title
+    text-align: center
+
+  .products-wrapper
+    width: 100%
 </style>

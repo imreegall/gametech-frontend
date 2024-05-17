@@ -4,7 +4,6 @@ import { defineComponent } from 'vue'
 import gametechProductsList from "../../ui-kit/gametech-products-list.vue";
 
 import categories from "../../../storage/categories/index.js";
-import products from "../../../storage/products/index.js";
 
 import gametech404 from "../404/gametech-404.vue";
 import gametechProduct from "../../ui-kit/gametech-product.vue";
@@ -37,8 +36,12 @@ export default defineComponent({
 
   data() {
     return {
-      products,
+      products: []
     }
+  },
+
+  mounted() {
+    this.fetchProducts()
   },
 
   computed: {
@@ -67,14 +70,30 @@ export default defineComponent({
       }
 
       return this.categoryObject.title
-    },
-
-    currentCategoryProductsList() {
-      return this.products.filter(product => product.category === this.categoryObject.id)
-    },
+    }
   },
 
   methods: {
+    async fetchProducts() {
+      if (!this.categoryObject) {
+        return
+      }
+
+      const currentCategory = this.categoryObject.category
+
+      await fetch(`http://localhost:8080/api/good?category=${ currentCategory }`).then(async (res) => {
+        const result = await res.json()
+
+        this.products = result
+
+        console.log('Fetching Goods Result (success):')
+
+        console.table(result)
+      }).catch(err => {
+        console.log('Fetching Goods Error:', err)
+      })
+    },
+
     like(id) {
       this.$emit('like', id)
     },
@@ -109,7 +128,7 @@ export default defineComponent({
     <gametech-products-list
         :wishlist="wishlist"
         :cart="cart"
-        :products-list="currentCategoryProductsList"
+        :products-list="products"
         @like="like"
         @edit-cart-position="editCartPosition"
         @add-to-cart="addToCart"
